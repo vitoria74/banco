@@ -1,4 +1,4 @@
-public class Conta implements InterfaceConta{ // tem que implementar os métodos da interface
+public abstract class Conta implements InterfaceConta{ // tem que implementar os métodos da interface
 
     private int agencia;
     private int numero;
