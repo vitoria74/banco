@@ -5,4 +5,6 @@ public interface InterfaceConta { //todo método da interface é público, entã
     void depositar(double valor);
 
     void transferir(double valor, Conta contaDestino);
+
+    void imprimirExtrato();
 }
