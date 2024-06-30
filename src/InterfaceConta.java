@@ -1,4 +1,4 @@
-public interface InterfaceConta { //todo método da interface é público, então não precisa do public
+public interface InterfaceConta { 
     
     void sacar(double valor);
 

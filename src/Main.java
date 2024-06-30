@@ -1,11 +1,11 @@
 public class Main {
     
-    public static void main(String[] args) { // criando duas contas 
+    public static void main(String[] args) {  
 
         Cliente vitoria = new Cliente();
         vitoria.setNome("Vitória");
 
-        Conta corrente = new ContaCorrente(vitoria); // polimorfismo: posso colocar como Conta, ContaCorrente, IConta....
+        Conta corrente = new ContaCorrente(vitoria);
         corrente.depositar(100);
 
         Conta poupanca = new ContaPoupanca(vitoria);
