@@ -5,6 +5,7 @@ public class Main {
         Conta corrente = new ContaCorrente();
         Conta poupanca = new ContaPoupanca();
 
-        
+        corrente.imprimirExtrato();
+        poupanca.imprimirExtrato();
     }
 }
