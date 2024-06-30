@@ -36,7 +36,8 @@ public abstract class Conta implements InterfaceConta{ // tem que implementar os
 
     @Override
     public void transferir(double valor, Conta contaDestino) {
-                
+        this.sacar(valor);
+        contaDestino.depositar(valor);     
     }
 
     
