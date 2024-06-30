@@ -6,10 +6,12 @@ public abstract class Conta implements InterfaceConta{ // tem que implementar os
     protected int agencia; // protected pra ContaCorrente conseguir acessar
     protected int numero;
     protected double saldo;
+    protected Cliente cliente;
 
-    public Conta(){
+    public Conta(Cliente cliente){
         this.agencia = AGENCIA_PADRAO;
         this.numero = SEQUENCIAL++; // controlar a contagem ao criar contas (conta 1, conta 2...)
+        this.cliente = cliente;
     }
 
     public int getAgencia() {
