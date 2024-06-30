@@ -1,6 +1,6 @@
 public abstract class Conta implements InterfaceConta{ // tem que implementar os métodos da interface
 
-    private static final int AGENCIA_PADRAO = 0;
+    private static final int AGENCIA_PADRAO = 1;
     private static int SEQUENCIAL = 1;
 
     protected int agencia; // protected pra ContaCorrente conseguir acessar
@@ -26,20 +26,17 @@ public abstract class Conta implements InterfaceConta{ // tem que implementar os
 
     @Override
     public void depositar(double valor) {
-        // TODO Auto-generated method stub
-        
+        saldo += valor;        
     }
 
     @Override
     public void sacar(double valor) {
-        // TODO Auto-generated method stub
-        
+        saldo -= valor;  
     }
 
     @Override
     public void transferir(double valor, Conta contaDestino) {
-        // TODO Auto-generated method stub
-        
+                
     }
 
     
