@@ -43,6 +43,7 @@ public abstract class Conta implements InterfaceConta{ // tem que implementar os
     }
 
     protected void imprimirAtributos() {
+        System.out.println(String.format("Titular: %s", this.cliente.getNome()));
         System.out.println(String.format("Agência: %d", this.agencia)); // this é opcional
         System.out.println(String.format("Número: ", this.numero));
         System.out.println(String.format("Saldo: %.2f", this.saldo));
