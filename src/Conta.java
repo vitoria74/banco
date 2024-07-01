@@ -2,6 +2,10 @@ import lombok.Data;
 
 @Data
 
+/**
+ * Classe que implementa os métodos da Interface.
+ */
+
 public abstract class Conta implements InterfaceConta{ 
 
     private static final int AGENCIA_PADRAO = 1;
@@ -12,28 +16,44 @@ public abstract class Conta implements InterfaceConta{
     protected double saldo;
     protected Cliente cliente;
 
+    /**
+     * Construtor da classe Conta
+     * @param cliente - Nome do titular
+     */
     public Conta(Cliente cliente){
         this.agencia = AGENCIA_PADRAO;
         this.numero = SEQUENCIAL++; 
         this.cliente = cliente;
     }
 
+    /**
+     * Método para depositar um valor na conta
+     */
     @Override
     public void depositar(double valor) {
         saldo += valor;        
     }
 
+    /**
+     * Método para sacar um valor da conta
+     */
     @Override
     public void sacar(double valor) {
         saldo -= valor;  
     }
 
+    /*
+     * Método para transferir um valor de uma conta para outra
+     */
     @Override
     public void transferir(double valor, Conta contaDestino) {
         this.sacar(valor);
         contaDestino.depositar(valor);     
     }
 
+    /**
+     * Método para imprimir o nome do titular, número da agência, número da conta e o saldo
+     */
     protected void imprimirAtributos() {
         System.out.println(String.format("Titular: %s", this.cliente.getNome()));
         System.out.println(String.format("Agência: %d", this.agencia));
