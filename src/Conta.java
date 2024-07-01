@@ -1,3 +1,7 @@
+import lombok.Data;
+
+@Data
+
 public abstract class Conta implements InterfaceConta{ 
 
     private static final int AGENCIA_PADRAO = 1;
@@ -12,18 +16,6 @@ public abstract class Conta implements InterfaceConta{
         this.agencia = AGENCIA_PADRAO;
         this.numero = SEQUENCIAL++; 
         this.cliente = cliente;
-    }
-
-    public int getAgencia() {
-        return agencia;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public double getSaldo() {
-        return saldo;
     }
 
     @Override
