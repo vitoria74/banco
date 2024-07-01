@@ -40,6 +40,4 @@ public abstract class Conta implements InterfaceConta{
         System.out.println(String.format("Número: %d", this.numero));
         System.out.println(String.format("Saldo: %.2f", this.saldo));
     }
-
-    
 }
